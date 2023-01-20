@@ -1,7 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Dunca_Raul_Adrian_IE_ID_Proiect.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<Dunca_Raul_Adrian_IE_ID_ProiectContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Dunca_Raul_Adrian_IE_ID_ProiectContext") ?? throw new InvalidOperationException("Connection string 'Dunca_Raul_Adrian_IE_ID_ProiectContext' not found.")));
 
 var app = builder.Build();
 

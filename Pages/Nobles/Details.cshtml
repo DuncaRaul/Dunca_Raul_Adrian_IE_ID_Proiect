@@ -1,0 +1,43 @@
+﻿@page
+@model Dunca_Raul_Adrian_IE_ID_Proiect.Pages.Nobles.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Noble</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Noble.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Noble.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Noble.Rank)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Noble.Rank)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Noble.Age)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Noble.Age)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Noble.Territory)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Noble.Territory.ID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Noble?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

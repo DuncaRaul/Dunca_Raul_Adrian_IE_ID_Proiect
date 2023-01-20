@@ -1,0 +1,50 @@
+﻿@page
+@model Dunca_Raul_Adrian_IE_ID_Proiect.Pages.Rulers.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Rulers</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Rulers.id" />
+            <div class="form-group">
+                <label asp-for="Rulers.name" class="control-label"></label>
+                <input asp-for="Rulers.name" class="form-control" />
+                <span asp-validation-for="Rulers.name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rulers.publicAcceptance" class="control-label"></label>
+                <input asp-for="Rulers.publicAcceptance" class="form-control" />
+                <span asp-validation-for="Rulers.publicAcceptance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rulers.age" class="control-label"></label>
+                <input asp-for="Rulers.age" class="form-control" />
+                <span asp-validation-for="Rulers.age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rulers.TerritoryID" class="control-label"></label>
+                <select asp-for="Rulers.TerritoryID" class="form-control" asp-items="ViewBag.TerritoryID"></select>
+                <span asp-validation-for="Rulers.TerritoryID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
