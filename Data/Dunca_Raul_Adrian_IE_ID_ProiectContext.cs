@@ -19,5 +19,9 @@ namespace Dunca_Raul_Adrian_IE_ID_Proiect.Data
         public DbSet<Dunca_Raul_Adrian_IE_ID_Proiect.Models.Territory> Territory { get; set; }
 
         public DbSet<Dunca_Raul_Adrian_IE_ID_Proiect.Models.Noble> Noble { get; set; }
+
+        public DbSet<Dunca_Raul_Adrian_IE_ID_Proiect.Models.Subject> Subject { get; set; }
+
+        public DbSet<Dunca_Raul_Adrian_IE_ID_Proiect.Models.Army> Army { get; set; }
     }
 }

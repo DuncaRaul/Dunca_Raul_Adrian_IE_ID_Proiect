@@ -4,6 +4,7 @@ using Dunca_Raul_Adrian_IE_ID_Proiect.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Dunca_Raul_Adrian_IE_ID_Proiect.Migrations
 {
     [DbContext(typeof(Dunca_Raul_Adrian_IE_ID_ProiectContext))]
-    partial class Dunca_Raul_Adrian_IE_ID_ProiectContextModelSnapshot : ModelSnapshot
+    [Migration("20230120033606_Army")]
+    partial class Army
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
